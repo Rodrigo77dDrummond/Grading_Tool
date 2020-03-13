@@ -2,6 +2,8 @@
 
 TO-DO LIST:
 
-1. Access and learn previous code
-2. Decide on platform for tool (website, local file etc.)
-3. Create Test file with some buttons and comment generation
+1. Fill in custom answers for each feedback.
+2. Create an opening and closing.
+3. Create Python to access sketch.js file
+4. Deocrate and customize website
+5. Figure out how to create a file with the comment as supposed to the console logging.
