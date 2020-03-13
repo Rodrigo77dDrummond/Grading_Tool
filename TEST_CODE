@@ -1,6 +1,6 @@
 //variables
-let a = "Answer 1. "
-let b = "Answer 2. "
+let a = "Broad/unspecific claim (AKA, parroting the prompt instead of answering it) Explanation: You may have been taught at some point in your writing instruction to take the question or prompt and (after making it a declarative statement) turn it into the first sentence of your response. Doing so ensures that you are focused on answering the question that was asked. The resulting language is often vague and generic, though. Instead of parroting the prompt, think about answering it. If the prompt asks you how an author uses language to shape your understanding of a character’s feelings, you should name the character, identify the relevant language devices and tactics, and specify the feelings. What to do: Think of the broad terms of your prompt as general categories that require specific answers to help you craft a more precise and engaging opening claim."
+let b = "Explanation: This construction is overused and considered weak. There’s always a more specific way to phrase “this” and often a better verb to choose than “shows.” What to do: Replace “this” with a more specific term that describes the same thing and choose a more precise verb. Instead of “this shows” you might use “Antigone’s angry reply reveals” or “the violent image suggests."
 let c = "Answer 3. "
 let d = "Answer 4. "
 let e = "Answer 5. "
