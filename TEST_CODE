@@ -1,1 +1,240 @@
+//variables
+let a = "Answer 1. "
+let b = "Answer 2. "
+let c = "Answer 3. "
+let d = "Answer 4. "
+let e = "Answer 5. "
+let f = "Answer 6. "
+let g = "Answer 7. "
+let h = "Answer 8. "
+let i = "Answer 9. "
+let j = "Answer 10. "
+let k = "Answer 11. "
+let l = "Answer 12. "
+let m = "Answer 13. "
+let n = "Answer 14. "
+let o = "Answer 15. "
+let p = "Answer 16. "
+let q = "Answer 17. "
+let r = "Answer 18. "
+let s = "Answer 19. "
+let t = "Answer 20. "
+let u = "Answer 21. "
+let v = "Answer 22. "
+let w = "Answer 23. "
+let x = "Answer 24. "
+let y = "Answer 25. "
+let z = "Answer 26. "
+let zz = "Answer 27. "
+let comment
+let button1
+let button2
+let button3
+let button4
+let button5
+let button6
+let button7
+let button8
+let button9
+let button10
+let button11
+let button12
+let button13
+let button14
+let button15
+let button16
+let button17
+let button18
+let button19
+let button20
+let button21
+let button22
+let button23
+let button24
+let button25
+let button26
+let button27
 
+
+function setup() {
+  
+  createCanvas(400, 400);
+  
+  var name = createInput();
+  name.input(NAME);
+  name.size(120)
+  name.position(60,10);
+  
+  var date = createInput();
+  date.input(DATE);
+  date.size(80);
+  date.position(260, 10)
+  
+  var block = createInput();
+  block.input(BLOCK);
+  block.size(40)
+  block.position(60,35)
+  
+  var asmt = createInput();
+  asmt.input(ASMT);
+  asmt.size(120)
+  asmt.position(220,35)
+  
+  button1 = createRadio();
+  button1.option(1,a)
+  button1.position(20,100)
+  
+  button2 = createRadio();
+  button2.option(2, b)
+  button2.position(60,100)
+  
+  button3 = createRadio();
+  button3.option(3, c)
+  button3.position(100,100)
+  
+  button4 = createRadio();
+  button4.option(4, d)
+  button4.position(140,100)
+  
+  button5 = createRadio();
+  button5.option(5, e)
+  button5.position(180,100)
+  
+  button6 = createRadio();
+  button6.option(6, f)
+  button6.position(220,100)
+  
+  button7 = createRadio();
+  button7.option(7, g)
+  button7.position(260,100)
+  
+  button8 = createRadio();
+  button8.option(8, h)
+  button8.position(300,100)
+  
+  button9 = createRadio();
+  button9.option(9, i)
+  button9.position(340,100)
+  
+  button10 = createRadio();
+  button10.option(10, j)
+  button10.position(20,130)
+  
+   button11 = createRadio();
+  button11.option(11, k)
+  button11.position(60,130)
+  
+   button12 = createRadio();
+  button12.option(12, l)
+  button12.position(100,130)
+  
+  button13 = createRadio();
+  button13.option(13, m)
+  button13.position(140,130)
+  
+  button14 = createRadio();
+  button14.option(14, n)
+  button14.position(180,130)
+  
+  button15 = createRadio();
+  button15.option(15, o)
+  button15.position(220,130)
+  
+  button16 = createRadio();
+  button16.option(16, p)
+  button16.position(260,130)
+  
+  button17 = createRadio();
+  button17.option(17, q)
+  button17.position(300,130)
+  
+  button18 = createRadio();
+  button18.option(18, r)
+  button18.position(340,130)
+  
+  button19 = createRadio();
+  button19.option(19, s)
+  button19.position(20,160)
+  
+  button20 = createRadio();
+  button20.option(20, t)
+  button20.position(60,160)
+  
+  button21 = createRadio();
+  button21.option(21, u)
+  button21.position(100,160)
+  
+  button22 = createRadio();
+  button22.option(22, v)
+  button22.position(140,160)
+  
+  button23 = createRadio();
+  button23.option(23, w)
+  button23.position(180,160)
+  
+  button24 = createRadio();
+  button24.option(24, x)
+  button24.position(220,160)
+  
+  button25 = createRadio();
+  button25.option(25, y)
+  button25.position(260,160)
+  
+  button26 = createRadio();
+  button26.option(26, z)
+  button26.position(300,160)
+  
+  button27 = createRadio();
+  button27.option(27, zz)
+  button27.position(340,160)  
+  
+}
+
+function draw() {
+  background(220);
+  textSize(15)
+  text("Name:", 10, 25);
+  text("Date:", 210, 25);
+  text("Block:", 10, 50);
+  text("Assignment:", 130, 50);
+  text("Areas of Improvement:", 10, 90);
+  
+  Opening();
+  Closing();
+  Comment();
+
+}
+
+function NAME(){
+  studentName = this.value();
+}
+
+function DATE(){
+  studentDate = this.value();
+}
+
+function BLOCK(){
+  studentBlock = this.value();
+}
+
+function ASMT(){
+ studentAsmt = this.value(); 
+}
+
+function Opening(){
+  opening = "Hello!"
+}
+
+function Closing(){
+  closing = "Great Job!"
+}
+
+function Comment(){
+  comment =       button1.value() + button2.value() + button3.value() + button4.value() + button5.value() + button6.value() + button7.value() + button8.value() + button9.value() + button10.value() + button11.value() + button12.value() + button13.value() + button14.value() + button15.value() + button16.value() + button17.value() + button18.value() + button19.value() + button20.value() + button21.value() + button22.value() + button23.value() + button24.value() + button24.value() + button26.value() + button27.value()
+}
+
+function keyPressed() {
+  if (keyCode === RETURN){
+    console.log(studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+".",opening, comment,     closing);
+  }
+}
