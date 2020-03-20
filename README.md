@@ -2,8 +2,9 @@
 
 TO-DO LIST:
 
-1. Fill in custom answers for each feedback.
-2. Create an opening and closing.
-3. Create Python to access sketch.js file
-4. Deocrate and customize website
-5. Figure out how to create a file with the comment as supposed to the console logging.
+1. Review server basics
+2. Create a custom opening and closing.
+3. Create a server
+4. Create a database with recall
+5. Deocrate and customize website
+
