@@ -2,9 +2,8 @@
 
 TO-DO LIST:
 
-1. Review server basics
-2. Create a custom opening and closing.
-3. Create a server
-4. Create a database with recall
-5. Deocrate and customize website
+1. Fix quoted text (bug)
+2. Figure out how to print comment (HELP)
+3. Figure out how to save data to a dictionary or database (HELP)
+3. Decorate and customize website
 
