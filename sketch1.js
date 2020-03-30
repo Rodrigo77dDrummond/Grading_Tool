@@ -57,137 +57,135 @@ let button27
 
 
 function setup() {
-  
+
   createCanvas(400, 400);
-  
   var name = createInput();
   name.input(NAME);
   name.size(120)
-  name.position(60,10);
-  
+  name.position(70,150);
+
   var date = createInput();
   date.input(DATE);
-  date.size(80);
-  date.position(260, 10)
-  
+  date.size(90);
+  date.position(260, 150)
+
   var block = createInput();
   block.input(BLOCK);
   block.size(40)
-  block.position(60,35)
-  
+  block.position(70,175)
+
   var asmt = createInput();
   asmt.input(ASMT);
   asmt.size(120)
-  asmt.position(220,35)
-  
+  asmt.position(230,175)
+
   button1 = createRadio();
   button1.option(1,a)
-  button1.position(20,100)
-  
+  button1.position(20,225)
+
   button2 = createRadio();
   button2.option(2, b)
-  button2.position(60,100)
-  
+  button2.position(60,225)
+
   button3 = createRadio();
   button3.option(3, c)
-  button3.position(100,100)
-  
+  button3.position(100,225)
+
   button4 = createRadio();
   button4.option(4, d)
-  button4.position(140,100)
-  
+  button4.position(140,225)
+
   button5 = createRadio();
   button5.option(5, e)
-  button5.position(180,100)
-  
+  button5.position(180,225)
+
   button6 = createRadio();
   button6.option(6, f)
-  button6.position(220,100)
-  
+  button6.position(220,225)
+
   button7 = createRadio();
   button7.option(7, g)
-  button7.position(260,100)
-  
+  button7.position(260,225)
+
   button8 = createRadio();
   button8.option(8, h)
-  button8.position(300,100)
-  
+  button8.position(300,225)
+
   button9 = createRadio();
   button9.option(9, i)
-  button9.position(340,100)
-  
+  button9.position(340,225)
+
   button10 = createRadio();
   button10.option(10, j)
-  button10.position(20,130)
-  
+  button10.position(20,255)
+
    button11 = createRadio();
   button11.option(11, k)
-  button11.position(60,130)
-  
+  button11.position(60,255)
+
    button12 = createRadio();
   button12.option(12, l)
-  button12.position(100,130)
-  
+  button12.position(100,255)
+
   button13 = createRadio();
   button13.option(13, m)
-  button13.position(140,130)
-  
+  button13.position(140,255)
+
   button14 = createRadio();
   button14.option(14, n)
-  button14.position(180,130)
-  
+  button14.position(180,255)
   button15 = createRadio();
   button15.option(15, o)
-  button15.position(220,130)
-  
+  button15.position(220,255)
+
   button16 = createRadio();
   button16.option(16, p)
-  button16.position(260,130)
-  
+  button16.position(260,255)
+
   button17 = createRadio();
   button17.option(17, q)
-  button17.position(300,130)
-  
+  button17.position(300,255)
+
   button18 = createRadio();
   button18.option(18, r)
-  button18.position(340,130)
-  
+  button18.position(340,255)
+
   button19 = createRadio();
   button19.option(19, s)
-  button19.position(20,160)
-  
+  button19.position(20,285)
+
   button20 = createRadio();
   button20.option(20, t)
-  button20.position(60,160)
-  
+  button20.position(60,285)
+
   button21 = createRadio();
   button21.option(21, u)
-  button21.position(100,160)
-  
+  button21.position(100,285)
+
   button22 = createRadio();
   button22.option(22, v)
-  button22.position(140,160)
-  
+  button22.position(140,285)
+
   button23 = createRadio();
   button23.option(23, w)
-  button23.position(180,160)
-  
+  button23.position(180,285)
+
   button24 = createRadio();
   button24.option(24, x)
-  button24.position(220,160)
-  
+  button24.position(220,285)
+
   button25 = createRadio();
   button25.option(25, y)
-  button25.position(260,160)
-  
+  button25.position(260,285)
+
   button26 = createRadio();
   button26.option(26, z)
-  button26.position(300,160)
-  
+  button26.position(300,285)
+
   button27 = createRadio();
   button27.option(27, zz)
-  button27.position(340,160)  
-  
+  button27.position(340,285)
+
 }
 
 function draw() {
@@ -197,8 +195,8 @@ function draw() {
   text("Date:", 210, 25);
   text("Block:", 10, 50);
   text("Assignment:", 130, 50);
-  text("Areas of Improvement:", 10, 90);
-  
+  text("Areas of Improvement:", 10, 75);
+
   Opening();
   Closing();
   Comment();
@@ -214,11 +212,11 @@ function DATE(){
 }
 
 function BLOCK(){
-  studentBlock = this.value();
+  studentBlock = str(this.value()) + " Block";
 }
 
 function ASMT(){
- studentAsmt = this.value(); 
+ studentAsmt = this.value();
 }
 
 function Opening(){
@@ -235,6 +233,8 @@ function Comment(){
 
 function keyPressed() {
   if (keyCode === RETURN){
-    console.log(studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+".",opening, comment,     closing);
+    console.log(studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+":",opening, comment, closing)
+    textSize(20)
+    comment1 = studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+":",opening, comment, closing
   }
 }
