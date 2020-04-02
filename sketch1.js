@@ -78,6 +78,11 @@ function setup() {
   asmt.input(ASMT);
   asmt.size(120)
   asmt.position(230,175)
+  
+  let button = createButton('Print');
+   button.position(20, 330);
+   button.size(55,25);
+  button.mousePressed(submitComment);
 
   button1 = createRadio();
   button1.option(1,a)
@@ -231,10 +236,8 @@ function Comment(){
   comment =       button1.value() + button2.value() + button3.value() + button4.value() + button5.value() + button6.value() + button7.value() + button8.value() + button9.value() + button10.value() + button11.value() + button12.value() + button13.value() + button14.value() + button15.value() + button16.value() + button17.value() + button18.value() + button19.value() + button20.value() + button21.value() + button22.value() + button23.value() + button24.value() + button24.value() + button26.value() + button27.value()
 }
 
-function keyPressed() {
-  if (keyCode === RETURN){
+function submitComment() {
     console.log(studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+":",opening, comment, closing)
     textSize(20)
     comment1 = studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+":",opening, comment, closing
   }
-}
