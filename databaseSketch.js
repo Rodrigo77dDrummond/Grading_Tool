@@ -67,6 +67,7 @@ function setup() { //STARTS BELOW
    messagingSenderId: "397994188961",
    appId: "1:397994188961:web:f3ad7e407c55bffcb190e0"
  };
+ 
  firebase.initializeApp(config);
  console.log(firebase)
  var database = firebase.database();
