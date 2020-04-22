@@ -54,9 +54,22 @@ let button24
 let button25
 let button26
 let button27
-
+let database
 
 function setup() {
+  
+ var config = {
+    apiKey: "AIzaSyDMOuq8gdfXSVuTVG5yMG63vnSgO-RtgtE",
+    authDomain: "test6-c20ce.firebaseapp.com",
+    databaseURL: "https://test6-c20ce.firebaseio.com",
+    projectId: "test6-c20ce",
+    storageBucket: "test6-c20ce.appspot.com",
+    messagingSenderId: "413910233310",
+    appId: "1:413910233310:web:7ba27a00ac0d27e44d924f"
+  };
+ firebase.initializeApp(config);
+ console.log(firebase)
+ database = firebase.database();
 
   createCanvas(400, 400);
   var name = createInput();
@@ -80,8 +93,8 @@ function setup() {
   asmt.position(230,175)
   
   let button = createButton('Print');
-   button.position(20, 330);
-   button.size(55,25);
+  button.position(20, 330);
+  button.size(55,25);
   button.mousePressed(submitComment);
 
   button1 = createRadio();
@@ -238,6 +251,12 @@ function Comment(){
 
 function submitComment() {
     console.log(studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+":",opening, comment, closing)
-    textSize(20)
-    comment1 = studentName+", "+ studentDate+", "+studentBlock+', '+studentAsmt+":",opening, comment, closing
+    var ref = database.ref('Reports');
+    var data = {
+        name: studentName,
+        block: studentBlock,
+        asmt: studentAsmt,
+        date: studentDate
+        }
+    ref.push(data);
   }
