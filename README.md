@@ -2,6 +2,5 @@
 
 TO-DO LIST:
 
-1. Fix quoted text (bug)
-3. Decorate and customize website
-
+1. Feedback
+2. Fix rules and authentication
