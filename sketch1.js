@@ -73,7 +73,7 @@ function setup() {
  console.log(firebase)
  database = firebase.database();
 
-  createCanvas(400, 600);
+  createCanvas(400, 1200);
   var name = createInput();
   name.input(NAME);
   name.size(120)
@@ -219,7 +219,7 @@ function draw() {
 
   if(comment1){
   textSize(10)
-  text(comment1, 20,260,300,285)
+  text(comment1, 20,260,360,800)
   }
 
 
