@@ -209,7 +209,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(255, 239, 66);
   textSize(15)
   text( "Name: ", 10, 25);
   text( "Date: ", 210, 25);
