@@ -28,7 +28,6 @@ let z = "26.  Contractions. Explanation: A contraction is a shortened form of a 
 let zz = "27. Unnecessary repetition. Explanation: Don\'t repeat the same word in a sentence twice. What to do: If it is a person\'s name, replace with a pronoun, and remove a repeated word if it is an adverb. Also, ask Mr. Schenk.  "
 let comment
 let comment1
-let emptyVariable
 let button1
 let button2
 let button3
@@ -93,6 +92,11 @@ function setup() {
   asmt.input(ASMT);
   asmt.size(120)
   asmt.position(230,105)
+
+  var numbers = createInput();
+  numbers.input(NUMBERS)
+  numbers.size(175)
+  numbers.position(175,130)
 
   let button = createButton( "Print ");
   button.position(20, 260);
@@ -209,7 +213,7 @@ function setup() {
 }
 
 function draw() {
-  background(255, 239, 66);
+  background(255,239,66);
   textSize(15)
   text( "Name: ", 10, 25);
   text( "Date: ", 210, 25);
@@ -245,8 +249,9 @@ function ASMT(){
  studentAsmt = this.value();
 }
 
-function TEXT(){
-    this.value() = emptyVariable
+function NUMBERS(){
+    studentData = this.value();
+
 }
 
 function Opening(){
@@ -269,7 +274,9 @@ function submitComment() {
         name: studentName,
         block: studentBlock,
         asmt: studentAsmt,
-        date: studentDate
+        date: studentDate,
+        areas: studentData,
+        comment: comment1
         }
     ref.push(data);
   }
