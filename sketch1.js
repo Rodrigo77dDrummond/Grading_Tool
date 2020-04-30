@@ -72,158 +72,167 @@ function setup() {
  console.log(firebase)
  database = firebase.database();
 
-  createCanvas(400, 1200);
+  createCanvas(displayWidth, displayHeight);
   var name = createInput();
   name.input(NAME);
   name.size(120)
-  name.position(70,80);
+  name.position(displayWidth/2-110,130);
 
   var date = createInput();
   date.input(DATE);
   date.size(90);
-  date.position(260, 80)
+  date.position(displayWidth/2+90, 130)
 
   var block = createInput();
   block.input(BLOCK);
   block.size(40)
-  block.position(70,105)
+  block.position(displayWidth/2-110,155)
 
   var asmt = createInput();
   asmt.input(ASMT);
   asmt.size(120)
-  asmt.position(230,105)
+  asmt.position(displayWidth/2+60,155)
 
   var numbers = createInput();
   numbers.input(NUMBERS)
   numbers.size(175)
-  numbers.position(175,130)
+  numbers.position(displayWidth/2+5,180)
 
   let button = createButton( "Print ");
-  button.position(20, 260);
-  button.size(55,25);
+  button.position(displayWidth/2-90, 313);
   button.mousePressed(submitComment);
+  button.size(200,25)
 
   button1 = createRadio();
   button1.option(1,a)
-  button1.position(20,155)
+  button1.position(displayWidth/2-160,205)
+
 
   button2 = createRadio();
   button2.option(2, b)
-  button2.position(60,155)
+  button2.position(displayWidth/2-120,205)
 
   button3 = createRadio();
   button3.option(3, c)
-  button3.position(100,155)
+  button3.position(displayWidth/2-80,205)
 
   button4 = createRadio();
   button4.option(4, d)
-  button4.position(140,155)
+  button4.position(displayWidth/2-40,205)
 
   button5 = createRadio();
   button5.option(5, e)
-  button5.position(180,155)
+  button5.position(displayWidth/2,205)
 
   button6 = createRadio();
   button6.option(6, f)
-  button6.position(220,155)
+  button6.position(displayWidth/2+40,205)
 
   button7 = createRadio();
   button7.option(7, g)
-  button7.position(260,155)
+  button7.position(displayWidth/2+80,205)
 
   button8 = createRadio();
   button8.option(8, h)
-  button8.position(300,155)
+  button8.position(displayWidth/2+120,205)
 
   button9 = createRadio();
   button9.option(9, i)
-  button9.position(340,155)
+  button9.position(displayWidth/2+160,205)
 
   button10 = createRadio();
   button10.option(10, j)
-  button10.position(20,185)
+  button10.position(displayWidth/2-160,235)
 
    button11 = createRadio();
   button11.option(11, k)
-  button11.position(60,185)
+  button11.position(displayWidth/2-120,235)
 
    button12 = createRadio();
   button12.option(12, l)
-  button12.position(100,185)
+  button12.position(displayWidth/2-80,235)
 
   button13 = createRadio();
   button13.option(13, m)
-  button13.position(140,185)
+  button13.position(displayWidth/2-40,235)
 
   button14 = createRadio();
   button14.option(14, n)
-  button14.position(180,185)
+  button14.position(displayWidth/2,235)
+
   button15 = createRadio();
   button15.option(15, o)
-  button15.position(220,185)
+  button15.position(displayWidth/2+40,235)
 
   button16 = createRadio();
   button16.option(16, p)
-  button16.position(260,185)
+  button16.position(displayWidth/2+80,235)
 
   button17 = createRadio();
   button17.option(17, q)
-  button17.position(300,185)
+  button17.position(displayWidth/2+120,235)
 
   button18 = createRadio();
   button18.option(18, r)
-  button18.position(340,185)
+  button18.position(displayWidth/2+160,235)
 
   button19 = createRadio();
   button19.option(19, s)
-  button19.position(20,215)
+  button19.position(displayWidth/2-160,265)
 
   button20 = createRadio();
   button20.option(20, t)
-  button20.position(60,215)
+  button20.position(displayWidth/2-120,265)
 
   button21 = createRadio();
   button21.option(21, u)
-  button21.position(100,215)
+  button21.position(displayWidth/2-80,265)
 
   button22 = createRadio();
   button22.option(22, v)
-  button22.position(140,215)
+  button22.position(displayWidth/2-40,265)
 
   button23 = createRadio();
   button23.option(23, w)
-  button23.position(180,215)
+  button23.position(displayWidth/2,265)
 
   button24 = createRadio();
   button24.option(24, x)
-  button24.position(220,215)
+  button24.position(displayWidth/2+40,265)
 
   button25 = createRadio();
   button25.option(25, y)
-  button25.position(260,215)
+  button25.position(displayWidth/2+80,265)
 
   button26 = createRadio();
   button26.option(26, z)
-  button26.position(300,215)
+  button26.position(displayWidth/2+120,265)
 
   button27 = createRadio();
   button27.option(27, zz)
-  button27.position(340,215)
+  button27.position(displayWidth/2+160,265)
 
 }
 
 function draw() {
   background(255,239,66);
+  noFill()
+  strokeWeight(4)
+  rect(displayWidth/2-190,45,390,190)
+  fill(0)
   textSize(15)
-  text( "Name: ", 10, 25);
-  text( "Date: ", 210, 25);
-  text( "Block: ", 10, 50);
-  text( "Assignment: ", 130, 50);
-  text( "Areas of Improvement: ", 10, 75);
+  text( "Name: ", displayWidth/2-170, 75);
+  text( "Date: ", displayWidth/2+40, 75);
+  text( "Block: ", displayWidth/2-170, 100);
+  text( "Assignment: ", displayWidth/2-40, 100);
+  text( "Areas of Improvement: ", displayWidth/2-170, 125);
 
   if(comment1){
-  textSize(10)
-  text(comment1, 20,260,360,800)
+    fill(255)
+    rect(displayWidth/2-420,280,840,displayHeight-290)
+    fill(0)
+    textSize(15)
+    text(comment1, displayWidth/2-400,300,800,displayHeight-270)
   }
 
 
@@ -267,16 +276,16 @@ function Comment(){
 }
 
 function submitComment() {
-    comment1 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " +  " " + opening +  " " + comment + closing
-    console.log(comment1)
-    var ref = database.ref("Reports");
-    var data = {
-        name: studentName,
-        block: studentBlock,
-        asmt: studentAsmt,
-        date: studentDate,
-        areas: studentData,
-        comment: comment1
-        }
+   comment1 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " +  " " + opening +  " " + comment + closing
+   console.log(comment1)
+   var ref = database.ref("Reports");
+   var data = {
+     name: studentName,
+     block: studentBlock,
+     asmt: studentAsmt,
+     date: studentDate,
+     areas: studentData,
+     comment: comment1
+     }
     ref.push(data);
   }
