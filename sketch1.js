@@ -7,7 +7,7 @@ let e = "5. Lead-ins that don\'t further your argument. Explanation: The setup o
 let f = "6. Quotations that are overly long. Explanation: It\'s often difficult and awkward to insert a whole sentence (or more) from one text inside of your writing. Plus, you often really want to concentrate on a shorter phrase within the sentence, anyway. What to do: 1. Only quote the portion of your text that helps you advance your argument. Instead of quoting entire sentences, think about leading in with paraphrase and then including only the most relevant portion of the sentence. This is also called using snippet quotes, and they can come at the beginning, middle, or end or your sentence, and you can also use multiple snippets inside of a single sentence. 2. If it is important to maintain your whole quotation, you may want to use a block quote. To form a block quote, place the quotation in a free-standing block of text and omit quotation marks. Start the quotation on a new line, with the entire quote indented ½ inch from the left margin; Your parenthetical citation should come after the closing punctuation mark. "
 let g = "7. Calling your text a book. Explanation: This word choice is a matter of convention in literary analysis. \'Book\' is the physical form or medium of the writing (as opposed to, say, an audio book). When analyzing literature, it\'s usually the type of writing that matters, not the form it comes in. For instance, a novel and an atlas are both books, but the novel has conventions and features that an atlas lacks (like characters, setting, plot, theme, etc.), and those are the elements that matter to a reader of literary analysis. What to do: Instead of calling it a book, replace that term with one that tells the genre or type of book. \'Novel\' or \'play\' is often appropriate, but sometimes a more specific genre works as well (like tragedy, fantasy, romance, etc.) "
 let h = "8. \'Using diction\' or \'using language\'. Explanation: Diction is an inherent quality of all writing, so every text \'uses\' diction. The term doesn\'t actually mean much unless you qualify the type of diction you mean. Similarly, the term language is too broad to be helpful. It\'s a little like saying that the author uses words. It\'s not wrong, but it\'s also not useful. What to do: Qualify \'diction\' with a specific adjective (Example diction types: Religious diction, elevated diction, casual diction, inconsistent diction) or specify a language device(Example language devices: metaphor, visual imagery, repetition). "
-let i = "9. Ellipses in quotes. Explanation: Ellipses (...) show that you have omitted something from the middle of a quotation without changing the meaning of that quotation. You don\'t need to use them leading into or out of a quotation. You can choose where to begin and end your quotes. What to do: If the part you want to quote begins or ends in the middle of a thought, paraphrase the rest outside of the quotation. If the original text reads I badly desired to defeat the odious monster you might paraphrase part of it and quote the rest, as in The narrator\'s repeated wish is simply \'to defeat the odious monster.\' "
+let i = "9. Ellipses in quotes. Explanation: Ellipses (...) show that you have omitted something from the middle of a quotation without changing the meaning of that quotation. You don\'t need to use them leading into or out of a quotation. You can choose where to begin and end your quotes. What to do: If the part you want to quote begins or ends in the middle of a thought, paraphrase the rest outside of the quotation. If the original text reads I badly desired to defeat the odious monster you might paraphrase part of it and quote the rest, as in The narrator\'s repeated wish is simply \'to defeat the odious monster.' "
 let j = "10. Citing page or line numbers. Explanation: MLA citation occurs in parentheses at the ends of clauses and sentences. What to do: If it isn\'t clear in your text who the author is, the citation should contain the author\'s last name and the page number or line number with no punctuation. 10b. Punctuation with citations. What to do: When a sentence ends with a quotation and no citation, the end punctuation goes inside of the quote marks. When a sentence ends with a quotation followed by a citation, the end punctuation goes last, after the closing of the quote and the citation. 10c. Citing multiple pages/lines. Explanation: Sometimes a single sentence will contain quotes from two different places. What to do: Give separate citations for each quote; place the citations after each respective quote. "
 let k = "11. Comma splice. Explanation: A comma splice occurs when two independent clauses (each of which could be a complete sentence on its own) are joined with a comma instead of a period, a semicolon, or a conjunction. What to do: There are a number of options, each with situational advantages. 1. Divide the two clauses with a period to show separation or distinctness. 2. Join the two clauses with a semicolon to show a link. 3. Join the two clauses with a conjunction to show a stronger link. 11b. Run-on sentence (also called a fused sentence). Explanation: A run-on is like a comma splice without the comma. It occurs when two independent clauses (each of which could be a complete sentence on its own) are joined together. What to do: There are a number of options, each with situational advantages. 1. Divide the two clauses with a period to show separation or distinctness. 2. Join the two clauses with a semicolon to show a link. 3. Join the two clauses with a comma and conjunction to show a stronger link. "
 let l = "12. 12.Misplaced modifiers. Explanation: A misplaced modifier occurs when a descriptive phrase or clause is too far from the word(s) it describes (aka modifies). The result is an awkward and confusing sentence. What to do: Find the source of confusion and figure out if it has something to do with one group of words describing another word or set of words. Reorganize the sentence so that the descriptive clause or phrase is closer to the word(s) being modified. "
@@ -25,9 +25,10 @@ let w = "23. Personal pronoun use in academic writing. Explanation: Avoid first 
 let x = "24. Sentence fragments. Explanation: Groups of words that end in a period (or other endmark) but are missing a subject or a verb. What to do: Identify what is missing: the subject, the verb, or both. Insert the subject (noun or pronoun) to show who or what is doing the action. Or, Insert the verb to show what is being done. "
 let y = "25. Unclear referent. Explanation: In a sentence containing persons that share the same gender, using a singular pronoun (he, him, his -or- she, her, hers) can be confusing when it is unclear who the subject is. What to do: Assign pronouns to one person; name the other individual with a proper noun or a common noun. Or, use a relative pronoun to distinguish the two individuals. "
 let z = "26.  Contractions. Explanation: A contraction is a shortened form of a word or phrase that is made by putting an apostrophe in the place of letters that are left out. It is an informal way of writing and speaking, and therefore inappropriate in academic composition, as they lend a casual tone to what should be formal and precise writing. The sole exception is when a contraction is in a quotation you cite. What to do: Write out the complete word or words. "
-let zz = "27. Unnecessary repetition. Explanation: Don\'t repeat the same word in a sentence twice. What to do: If it is a person\'s name, replace with a pronoun, and remove a repeated word if it is an adverb. Also, ask Mr. Schenk.  "
+let zz = "27. Unnecessary repetition. Explanation: Don\'t repeat the same word in a sentence twice. What to do: If it is a person\'s name, replace with a pronoun, and remove a repeated word if it is an adverb. Also, ask Mr. Schenk. "
 let comment
 let comment1
+let comment2
 let button1
 let button2
 let button3
@@ -232,7 +233,9 @@ function draw() {
     rect(displayWidth/2-420,280,840,displayHeight-290)
     fill(0)
     textSize(15)
-    text(comment1, displayWidth/2-400,300,800,displayHeight-270)
+    text(comment2, displayWidth/2-400, 300, 800, 50)
+    text(comment, displayWidth/2-400,350,800,displayHeight-320)
+
   }
 
 
@@ -264,7 +267,7 @@ function NUMBERS(){
 }
 
 function Opening(){
-  opening =  "Hello!"
+  opening =  "Marco, great job in this semester, you worked really hard in class!"
 }
 
 function Closing(){
@@ -272,12 +275,14 @@ function Closing(){
 }
 
 function Comment(){
-  comment =       button1.value() + button2.value() + button3.value() + button4.value() + button5.value() + button6.value() + button7.value() + button8.value() + button9.value() + button10.value() + button11.value() + button12.value() + button13.value() + button14.value() + button15.value() + button16.value() + button17.value() + button18.value() + button19.value() + button20.value() + button21.value() + button22.value() + button23.value() + button24.value() + button24.value() + button26.value() + button27.value()
+  comment =       button1.value() + button2.value() + button3.value() + button4.value() + button5.value() + button6.value() + button7.value() + button8.value() + button9.value() + button10.value() + button11.value() + button12.value() + button13.value() + button14.value() + button15.value() + button16.value() + button17.value() + button18.value() + button19.value() + button20.value() + button21.value() + button22.value() + button23.value() + button24.value() + button25.value() + button26.value() + button27.value()
 }
 
 function submitComment() {
    comment1 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " +  " " + opening +  " " + comment + closing
    console.log(comment1)
+   comment2 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " +  " " + opening
+
    var ref = database.ref("Reports");
    var data = {
      name: studentName,
