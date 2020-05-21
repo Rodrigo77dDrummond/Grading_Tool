@@ -1,4 +1,4 @@
-//variables
+//variables- each letter variable corresponds to the custom message of feedback that comes with each button
 let a = "1. Broad/unspecific claim (AKA, parroting the prompt instead of answering it) Explanation: You may have been taught at some point in your writing instruction to take the question or prompt and (after making it a declarative statement) turn it into the first sentence of your response. Doing so ensures that you are focused on answering the question that was asked. The resulting language is often vague and generic, though. Instead of parroting the prompt, think about answering it. If the prompt asks you how an author uses language to shape your understanding of a character\'s feelings, you should name the character, identify the relevant language devices and tactics, and specify the feelings. What to do: Think of the broad terms of your prompt as general categories that require specific answers to help you craft a more precise and engaging opening claim.                                                                                                                            "
 let b = "2. Using \'this shows\' Explanation: This construction is overused and considered weak. There\'s always a more specific way to phrase \'this\' and often a better verb to choose than \'shows.\' What to do: Replace \'this\' with a more specific term that describes the same thing and choose a more precise verb. Instead of \'this shows\' you might use \'Antigone\'s angry reply reveals\' or \'the violent image suggests.\' 2b. Using \'this is shown\' Explanation: This construction combines the issues of numbers 2 and 3 in this list. See both entries for more info. What to do: See numbers 2 and 3 for more information.                                                                                                                                                                                                                                              "
 let c = "3. Passive voice. Explanation: This is a grammatical issue that weakens your sentences. Instead of the subject \'doing\' the verb, your sentence is constructed so that the verb is \'being done\' by something (whether or not that something is named). What to do: Make sure that your subject of your sentence is doing the verb. It may help to search for \'is\' or \'was.\' Not every instance of those words will be an example of passive voice, but every example of passive voice will use one of those words.                                                                                                   "
@@ -26,7 +26,7 @@ let x = "24. Sentence fragments. Explanation: Groups of words that end in a peri
 let y = "25. Unclear referent. Explanation: In a sentence containing persons that share the same gender, using a singular pronoun (he, him, his -or- she, her, hers) can be confusing when it is unclear who the subject is. What to do: Assign pronouns to one person; name the other individual with a proper noun or a common noun. Or, use a relative pronoun to distinguish the two individuals.                                                                                                                                                                                                                                                                                         "
 let z = "26.  Contractions. Explanation: A contraction is a shortened form of a word or phrase that is made by putting an apostrophe in the place of letters that are left out. It is an informal way of writing and speaking, and therefore inappropriate in academic composition, as they lend a casual tone to what should be formal and precise writing. The sole exception is when a contraction is in a quotation you cite. What to do: Write out the complete word or words.                                                                                                                                                               "
 let zz = "27. Unnecessary repetition. Explanation: Don\'t repeat the same word in a sentence twice. What to do: If it is a person\'s name, replace with a pronoun, and remove a repeated word if it is an adverb. Also, ask Mr. Schenk.  "
-let comment
+let comment //defines all the variables as global variables so they can be used in multiple functions
 let comment1
 let comment2
 let button1
@@ -60,6 +60,7 @@ let database
 
 function setup() {
 
+// this connects the server to the database and it loads firebase
  var config = {
     apiKey: "AIzaSyDMOuq8gdfXSVuTVG5yMG63vnSgO-RtgtE",
     authDomain: "test6-c20ce.firebaseapp.com",
@@ -73,7 +74,10 @@ function setup() {
  console.log(firebase)
  database = firebase.database();
 
+
   createCanvas(displayWidth, displayHeight);
+
+  // these create our input fields for quick data entry about the student as well as an input for specific comments from teachers
   var name = createInput();
   name.input(NAME);
   name.size(120)
@@ -104,12 +108,13 @@ function setup() {
   custom.size(340);
   custom.position(displayWidth/2-160, 290)
 
-
+  // creates button that activates data entry and comment generation
   let button = createButton( "Print ");
   button.position(displayWidth/2-90, 315);
   button.mousePressed(submitComment);
   button.size(200,25)
 
+  //creates 27 individual buttons so multiple can be selected; each button corresponds to a pre written comment at top of code
   button1 = createRadio();
   button1.option(1,a)
   button1.position(displayWidth/2-160,205)
@@ -222,6 +227,7 @@ function setup() {
 }
 
 function draw() {
+//creates the Lick themed background as well as the descriptions of each input field, and details such as boxes
   background(255,239,66);
   noFill()
   strokeWeight(4)
@@ -234,7 +240,7 @@ function draw() {
   text( "Assignment: ", displayWidth/2-40, 100);
   text( "Areas of Improvement: ", displayWidth/2-170, 125);
 
-
+//only when the comment is finally constructed with all the data needed, it prints it onto the page so it can be reviewed before being copied from database
   if(comment1){
     fill(255)
     rect(displayWidth/2-650,280,1300,displayHeight-290)
@@ -244,13 +250,14 @@ function draw() {
     text(comment, displayWidth/2-625,340,1250,displayHeight-320)
   }
 
-
-  Opening();
-  Closing();
+  // updates functions consistently so data can be added in realtime and changes will be seen
+//Opening(); NOT BEING USED IN FINAL VERSION
+//Closing(); NOT BEING USED IN FINAL VERSION
   Comment();
 
 }
 
+//assigns data points to variables to be used in the comment generation
 function NAME(){
   studentName = this.value();
 }
@@ -277,22 +284,26 @@ function CUSTOM(){
 }
 
 
-function Opening(){
-  opening =  "Hello!"
-}
+//function Opening(){ NOT BEING USED IN FINAL VERSION
+//  opening =  "Hello!"
+//}
 
-function Closing(){
-  closing =  "Great Job!"
-}
+//function Closing(){ NOT BEING USED IN FINAL VERSION
+//  closing =  "Great Job!"
+//}
 
+//builds the comment with the selected buttons which translate to the areas of feedback; works because an unselected button will give out output of " " instead of undefined
 function Comment(){
   comment =       button1.value() + button2.value() + button3.value() + button4.value() + button5.value() + button6.value() + button7.value() + button8.value() + button9.value() + button10.value() + button11.value() + button12.value() + button13.value() + button14.value() + button15.value() + button16.value() + button17.value() + button18.value() + button19.value() + button20.value() + button21.value() + button22.value() + button23.value() + button24.value() + button25.value() + button26.value() + button27.value()
 }
 
+// this function constructs both the data set to be updated and builds the document to be loaded in website
 function submitComment() {
-   comment1 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " +  " " + opening + " " + studentCustom +  " " + comment + closing
-   comment2 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " +  " " + opening + " " + studentCustom
-   console.log(comment1)
+   comment1 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " + " " + studentCustom +  " " + comment
+   comment2 = studentName+ ", " + studentDate+ ", " +studentBlock+  ", " + studentAsmt +  ": " + " " + studentCustom
+//   console.log(comment1)
+
+   //sends this specific data set to firebase database, under the subsection reports
    var ref = database.ref("Reports");
    var data = {
      name: studentName,
