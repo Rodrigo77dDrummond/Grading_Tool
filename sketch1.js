@@ -68,9 +68,7 @@ function setup() {
     projectId: "test6-c20ce",
     storageBucket: "test6-c20ce.appspot.com",
     messagingSenderId: "413910233310",
-    appId:  "1:413910233310:web:7ba27a00ac0d27e44d924f",
-    provider: "admin",
-    uid: "30ad3458-ef53-48c8-aab1-8c94eaf6da09"
+    appId:  "1:413910233310:web:7ba27a00ac0d27e44d924f"
   };
 
 console.log(config)
